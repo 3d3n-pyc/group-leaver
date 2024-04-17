@@ -1,6 +1,6 @@
 # Programme Python : Readme
 
-Le programme lit les fichiers à rechercher dans le répertoire `data` et ses sous-dossiers. Vous devez placer les fichiers à rechercher dans ce répertoire (et ses sous-dossiers) avant d'exécuter le programme. Il utilise la librairie `pystyle` pour afficher des messages colorés dans la console.
+Le programme permet de quitter les groupes inactifs sur votre compte Discord.
 
 ## Supression des modules
 
