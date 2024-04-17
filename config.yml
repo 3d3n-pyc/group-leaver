@@ -1,0 +1,12 @@
+---
+
+token: ""
+message: "Ne pas créer de groupe sans mon autorisation 🩷"
+silentLeave: false
+deleteIfInactiveSince: "01/03/2024" # Format: dd/mm/yyyy
+whitelistedGroups:
+  - 1112982927647707236
+  - 1124753012192186458
+  - 1214270396358987777
+
+...
