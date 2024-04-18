@@ -33,5 +33,5 @@ Le programme supprimera les groupes inactifs selon votre configuration.
 ## Licence
 Ce programme est sous licence MIT. Veuillez consulter le fichier [LICENSE](/LICENSE) pour plus d'informations.
 
-## Attention
-Le script est uniquement à but éducatif. Je ne suis responsable d'aucun problème engendré par ce projet. (Il a néanmoins été fait de façon à ce que vous en ayez le moins possible)
+> [!NOTE]
+> Le script est uniquement à but éducatif. Je ne suis responsable d'aucun problème engendré par ce projet. (Il a néanmoins été fait de façon à ce que vous en ayez le moins possible)
