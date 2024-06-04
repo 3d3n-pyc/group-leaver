@@ -49,7 +49,12 @@ async def on_ready():
 
 try:
     bot.run(config['token'])
-except discord.LoginFailure or discord.ConnectionClosed or discord.HTTPException or discord.GatewayNotFound:
+except (
+    discord.LoginFailure,
+    discord.ConnectionClosed,
+    discord.HTTPException,
+    discord.GatewayNotFound
+):
     log.write('discord.utils', f'Impossible de se connecter au bot, vérifiez le token.', log.levels.error)
     time.sleep(10)
 except KeyboardInterrupt:
