@@ -20,32 +20,32 @@ bot = commands.Bot(command_prefix='!')
 @bot.event
 async def on_ready():
     log.write('discord.utils', f'Script par @3d3n.pyc', log.levels.info)
-    
+
     # Format: dd/mm/yyyy
     since = datetime.strptime(config['deleteIfInactiveSince'], r'%d/%m/%Y').timestamp()
-    
+
     channels = bot.private_channels
     for channel in channels:
         if not isinstance(channel, discord.GroupChannel):
             continue
-        
+
         if channel.id in config['whitelistedGroups']:
             continue
-        
+
         timestamp = time.mktime(time.strptime(str(channel.last_viewed_timestamp), r"%Y-%m-%d"))
-        
+
         if since < timestamp:
             continue
-        
+
         log.write('discord.client', f'{colors.reset}En train de quitter {colors.bright_blue}{channel}{colors.reset} dû à son inactivité depuis le {colors.bright_red}{channel.last_viewed_timestamp.strftime(r'%d/%m/%Y')}', log.levels.warning)
         await channel.send(config['message'])
         await channel.leave(silent=config['silentLeave'])
         await asyncio.sleep(2)
-        
+
     log.write('discord.utils', f'Fermeture dans 10 secondes', log.levels.info)
     await asyncio.sleep(10)
     await bot.close()
-    
+
 
 try:
     bot.run(config['token'])
