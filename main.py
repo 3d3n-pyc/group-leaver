@@ -19,7 +19,7 @@ bot = commands.Bot(command_prefix='!')
 
 @bot.event
 async def on_ready():
-    log.write('discord.utils', f'Script par @3d3n.pyc', log.levels.info)
+    log.write('discord.utils', 'Script par @3d3n.pyc', log.levels.info)
 
     # Format: dd/mm/yyyy
     since = datetime.strptime(config['deleteIfInactiveSince'], r'%d/%m/%Y').timestamp()
@@ -42,7 +42,7 @@ async def on_ready():
         await channel.leave(silent=config['silentLeave'])
         await asyncio.sleep(2)
 
-    log.write('discord.utils', f'Fermeture dans 10 secondes', log.levels.info)
+    log.write('discord.utils', 'Fermeture dans 10 secondes', log.levels.info)
     await asyncio.sleep(10)
     await bot.close()
 
@@ -55,8 +55,8 @@ except (
     discord.HTTPException,
     discord.GatewayNotFound
 ):
-    log.write('discord.utils', f'Impossible de se connecter au bot, vérifiez le token.', log.levels.error)
+    log.write('discord.utils', 'Impossible de se connecter au bot, vérifiez le token.', log.levels.error)
     time.sleep(10)
 except KeyboardInterrupt:
-    log.write('discord.utils', f'Fermeture du bot', log.levels.info)
+    log.write('discord.utils', 'Fermeture du bot', log.levels.info)
     time.sleep(10)
