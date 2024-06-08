@@ -1,12 +1,14 @@
 ---
 
-token: ""
+token: "TOKEN" # Token du compte Discord
+archive: null # Mettre un id d'un utilisateur que vous avez en amis sur le token pour activer l'archivage 
 message: "Ne pas créer de groupe sans mon autorisation 🩷"
 silentLeave: false
-deleteIfInactiveSince: "01/03/2024" # Format: dd/mm/yyyy
+deleteIfInactiveSince: "01/05/2024" # Format: dd/mm/yyyy
 whitelistedGroups:
   - 1112982927647707236
   - 1124753012192186458
   - 1214270396358987777
+  - 1214148203679719424
 
 ...
