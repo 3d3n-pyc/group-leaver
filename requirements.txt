@@ -1,3 +1,4 @@
-git+https://github.com/dolfies/discord.py-self.git@main
+discord.py-self
 PyYAML
 pytz
+
